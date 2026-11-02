@@ -264,10 +264,9 @@ wholedonuts-universe/
 ### Common Issues
 
 **DNS not resolving?**
-```bash
 nslookup landing-funnel.domain.com 8.8.8.8
 go run cmd/network-orchestrator/main.go -cmd=list
-```
+
 
 **Funnels not deploying?**
 ```bash
