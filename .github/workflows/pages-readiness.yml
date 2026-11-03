@@ -1,0 +1,46 @@
+name: Validate public Pages site
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/deploy-pages.yml'
+      - '.github/workflows/pages-readiness.yml'
+      - 'index.html'
+      - 'guide.html'
+      - 'styles.css'
+      - 'app.js'
+      - 'review-queue-manifest.js'
+      - 'storefront-config.js'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'CRUMB_PROTOCOL.md'
+      - 'WHOLE_DONUTS_GUIDE.md'
+      - 'PUBLIC_SYSTEM.md'
+      - 'RELEASE_NOTES.md'
+      - 'world/**'
+      - 'templates/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  public-site-readiness:
+    name: Public site readiness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify the staged public artifact
+        shell: bash
+        run: |
+          test ! -e CNAME || { echo 'Repository-hosted Pages must not include CNAME.' >&2; exit 1; }
+          mkdir -p _site/world _site/templates
+          cp index.html guide.html styles.css app.js review-queue-manifest.js storefront-config.js robots.txt sitemap.xml _site/
+          cp CRUMB_PROTOCOL.md WHOLE_DONUTS_GUIDE.md PUBLIC_SYSTEM.md RELEASE_NOTES.md _site/
+          cp world/index.html world/script.js world/styles.css _site/world/
+          compgen -G 'templates/*.md' > /dev/null || { echo 'A public template is required.' >&2; exit 1; }
+          cp templates/*.md _site/templates/
+          test ! -e _site/CNAME || { echo 'Staged artifact must not include CNAME.' >&2; exit 1; }
+          test -s _site/index.html
+          test -s _site/world/index.html
+          find _site -type f -print | sort
