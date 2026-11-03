@@ -1,25 +1,6 @@
 name: Validate public Pages site
 
-on:
-  pull_request:
-    paths:
-      - '.github/workflows/deploy-pages.yml'
-      - '.github/workflows/pages-readiness.yml'
-      - 'index.html'
-      - 'guide.html'
-      - 'styles.css'
-      - 'app.js'
-      - 'review-queue-manifest.js'
-      - 'storefront-config.js'
-      - 'robots.txt'
-      - 'sitemap.xml'
-      - 'CRUMB_PROTOCOL.md'
-      - 'WHOLE_DONUTS_GUIDE.md'
-      - 'PUBLIC_SYSTEM.md'
-      - 'RELEASE_NOTES.md'
-      - 'world/**'
-      - 'templates/**'
-  workflow_dispatch:
+on:`n  pull_request:`n  workflow_dispatch:
 
 permissions:
   contents: read
