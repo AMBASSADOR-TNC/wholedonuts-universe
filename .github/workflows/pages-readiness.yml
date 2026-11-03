@@ -1,6 +1,8 @@
 name: Validate public Pages site
 
-on:`n  pull_request:`n  workflow_dispatch:
+on:
+  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
