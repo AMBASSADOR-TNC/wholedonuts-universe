@@ -14,7 +14,7 @@ import (
 )
 
 type NetworkConfig struct {
-	Networks map[string]NetworkDef `json:"networks"`
+	Networks map[string]*NetworkDef `json:"networks"`
 }
 
 type NetworkDef struct {
