@@ -1,4 +1,4 @@
- # WholeDonut Domains Management
+# WholeDonut Domains Management
 
 ## Overview
 Centralized management system for all WholeDonut domains and subdomains.
@@ -114,7 +114,7 @@ funnel operations, not these registry states.
 | wholedonuts | .org | Active | Porkbun | Primary Brand | Multiple |
 | wholedonuts | .buzz | Active | Porkbun | Marketing Funnel | Multiple |
 | wholedonuts | .app | Inactive | Porkbun | Application Domain | None |
-| wenevergonnaclose | .com | Live on Universe Pages | Porkbun | Public +U entry | `www` |
+| wenevergonnaclose | .com | External canonical owner | Porkbun | Public +U entry | Managed by WENEVERGONNACLOSE |
 | thenurturedchef | .com | Inactive | Porkbun | Brand Domain | None |
 | thenurturedchef | .foundation | Inactive | Porkbun | Foundation Domain | None |
 | thenutur3dchef | .com | Active | Porkbun | Content Funnel | Multiple |
@@ -150,9 +150,9 @@ funnel operations, not these registry states.
 
 ## Deployment Status
 - [x] Documented domains catalogued
-- [x] `wenevergonnaclose.com` declared in the repository root `CNAME`
+- [x] Stale `wenevergonnaclose.com` CNAME removed from this repository
 - [x] GitHub Pages enabled through GitHub Actions
-- [x] Custom domain attached to Universe Pages with HTTPS enabled
+- [x] This repository publishes only its repository-hosted Pages URL
 - [ ] All subdomains mapped
 - [ ] DNS configurations synced
 - [ ] Funnel system validated
