@@ -1,4 +1,4 @@
- # Whole Donuts Universe
+# Whole Donuts Universe
 
 ## Launch Center
 
@@ -30,8 +30,7 @@ This repository is the consolidated home for the Whole Donuts Universe.
 
 ## Public site
 
-The repository root contains the static GitHub Pages bundle for
-`wenevergonnaclose.com`:
+The repository root contains this repository's public bundle. The canonical `wenevergonnaclose.com` entry is managed only by `AMBASSADOR-TNC/WENEVERGONNACLOSE`:
 
 The public movement statement invites every visitor to "find a piece of peace"
 and try a new direction when part of life feels restrained. It is welcoming
@@ -48,7 +47,7 @@ language, not a promise of treatment, recovery, or a guaranteed outcome.
   authority verification before organizational affiliation is claimed and
   separates youth safety, remembrance, sports marks, voluntary support, commerce,
   rewards, and campaign expiration.
-- `CNAME` declares `wenevergonnaclose.com` as the custom domain.
+- This repository does not include a CNAME or configure that custom domain.
 - `pro/` is the canonical Whole Donuts Professional workspace. It gives
   authorized organizations a clear path from the public gateway to the Movement
   Launch Brief, authority verification, rights review, approved distribution,
@@ -130,14 +129,7 @@ Maintainers refresh the queue through the normal local/repository workflow:
 
 The [`deploy-pages` workflow](.github/workflows/deploy-pages.yml) publishes
 the reviewed public bundle only when a maintainer dispatches it manually. It
-stages only named public static files, including the exact
-`CNAME`, and excludes Go operations configuration and local credentials. In
-**Settings -> Pages**, select **GitHub Actions** as the source and set the
-custom domain to `wenevergonnaclose.com`; GitHub provides the required DNS and
-verification instructions. The workflow verifies the deployed revision through
-the GitHub Pages URL, so custom-domain DNS propagation does not make a valid
-deployment look failed. Any future domain or DNS change requires a separate
-reviewed operational change.
+stages only named public static files and excludes domain configuration, Go operations configuration, and local credentials. This repository publishes its repository-hosted Pages site only; custom-domain DNS and verification are managed separately by `AMBASSADOR-TNC/WENEVERGONNACLOSE`.
 
 ### Public system and curation policy
 
@@ -166,6 +158,18 @@ The Go 1.21 funnel and domain operations project remains in `cmd/`, `pkg/`,
 site. See [SETUP.md](SETUP.md) and [README_FUNNELS.md](README_FUNNELS.md) for
 operational setup; keep credentials in local environment files or GitHub
 Actions secrets, never in the repository.
+
+### Documented domains
+
+The public-safe domain inventory lives in [DOMAINS.md](DOMAINS.md); the
+machine-readable registry is `projects/wholedonut-universe.yml`. The domains
+documented there are `wholedonuts.org`, `wholedonuts.buzz`,
+`wholedonuts.app`, `wenevergonnaclose.com`, `thenurturedchef.com`,
+`thenurturedchef.foundation`, `thenutur3dchef.com`,
+`thewholedonuts-beep.github.io`, and
+`thewholedonuts-beep.github.io/wholedonuts-universe`. Only the
+repository-hosted Pages URL is published from this repository; the canonical
+`wenevergonnaclose.com` entry is managed by `AMBASSADOR-TNC/WENEVERGONNACLOSE`.
 
 ## Voluntary Support Access and Rewards Center
 
