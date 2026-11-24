@@ -1,4 +1,4 @@
- # WholeDonut Complete Project Management
+# WholeDonut Complete Project Management
 # Central registry for all networks, domains, and funnels
 
 project_metadata:
@@ -23,8 +23,8 @@ domain_registry:
     purpose: Application domain
   - domain: wenevergonnaclose.com
     registrar: porkbun
-    status: pages-cutover-pending
-    purpose: Public +U entry; GitHub Pages and DNS still require manual configuration
+    status: canonical-owner-external
+    purpose: Public +U entry managed by AMBASSADOR-TNC/WENEVERGONNACLOSE; this repository does not configure Pages or DNS
   - domain: thenurturedchef.com
     registrar: porkbun
     status: inactive
