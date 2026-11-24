@@ -1,4 +1,4 @@
- package main
+package main
 
 import (
 	"context"
@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"path/filepath"
 
 	"github.com/thewholedonuts-beep/wholedonuts-universe/pkg/domains"
 	"gopkg.in/yaml.v2"
@@ -14,10 +13,10 @@ import (
 
 type FunnelConfig struct {
 	Domains []struct {
-		Name     string   `yaml:"name"`
-		TLD      string   `yaml:"tld"`
-		Status   string   `yaml:"status"`
-		Funnels  []string `yaml:"funnels"`
+		Name    string   `yaml:"name"`
+		TLD     string   `yaml:"tld"`
+		Status  string   `yaml:"status"`
+		Funnels []string `yaml:"funnels"`
 	} `yaml:"domains"`
 	Funnels map[string]struct {
 		Name          string `yaml:"name"`
@@ -98,7 +97,7 @@ func deployFunnels(ctx context.Context, manager *domains.Manager, configFile str
 		return fmt.Errorf("failed to parse YAML: %w", err)
 	}
 
-	fmt.Println("\n🚀 Starting funnel deployment...\n")
+	fmt.Println("\n🚀 Starting funnel deployment...")
 
 	// Add domains
 	fmt.Println("📍 Registering domains:")
