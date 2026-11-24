@@ -1,4 +1,4 @@
- ## Direct entry and current launch documentation
+## Direct entry and current launch documentation
 
 The homepage now opens with Learn, Create, and Explore. The existing 28-figure journey remains optional in an expandable section. Existing TNC/AWD routes, support gates, and privacy boundaries are preserved. The public system map now documents the live Launch Center and its Cash App/Chime-only sharing and download behavior. No registration, tracking, store, DNS, or database changes.
 
@@ -86,8 +86,7 @@ that a store, submission channel, reward, or companion capability is active.
 ### Pages delivery
 
 **What changed:** The Pages workflow deploys the reviewed static bundle only
-after a maintainer manually dispatches it, retaining
-`wenevergonnaclose.com` in the deployed `CNAME`.
+after a maintainer manually dispatches it, without claiming an external custom domain.
 
 **Why it matters:** The public site has one deployable source of truth.
 
