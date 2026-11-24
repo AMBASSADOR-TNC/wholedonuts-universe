@@ -1,7 +1,6 @@
- # Whole Donuts Universe public system
+# Whole Donuts Universe public system
 
-`https://wenevergonnaclose.com/` is the single public entry for Whole Donuts
-Universe. This document is the source-of-truth map for what the public site
+This repository does not own `https://wenevergonnaclose.com/`; the single public entry is managed by `AMBASSADOR-TNC/WENEVERGONNACLOSE`. This document is the source-of-truth map for what the public site
 offers, what it does not offer, and how a maintainer may consider new public
 material.
 
@@ -50,8 +49,7 @@ platform data into this repository.
 
 ## Companion repository reconciliation
 
-Universe is the only canonical public bundle and
-`wenevergonnaclose.com` is its only canonical public entry. This
+This repository's public bundle is repository-hosted. `AMBASSADOR-TNC/WENEVERGONNACLOSE` is the only canonical owner of `wenevergonnaclose.com`. This
 reconciliation records source boundaries without importing companion source
 contents or representing internal material as live:
 
@@ -103,5 +101,5 @@ change a source, publish material, or merge a change automatically.
 For an eligible public addition, update the relevant public page or template,
 `review-queue-manifest.js` when appropriate, this system map when availability
 changes, and the release notes. Verify the Pages artifact stages only intended
-public files and preserves `CNAME` exactly as `wenevergonnaclose.com`. Dispatch
+public files and does not include a custom-domain CNAME. Dispatch
 the deployment manually only after the reviewed merge is present on `main`.
