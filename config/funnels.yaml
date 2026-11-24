@@ -1,4 +1,4 @@
- # WholeDonut Money Funnel Configuration
+# WholeDonut Money Funnel Configuration
 # This file defines all money-making funnels across your domains
 
 domains:
@@ -30,7 +30,7 @@ domains:
     status: inactive
     registrar: porkbun
     funnels: []
-    pages_status: pending_github_pages_configuration
+    pages_status: managed_by_wenevergonnaclose_repository
 
   - name: thenurturedchef
     tld: com
